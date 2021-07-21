@@ -1,38 +1,172 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #0f0f2e;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.root { 
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #0f0f2e;
+    padding: 1rem;
+    margin-bottom: 30px;
+}
+
+.movie-card { 
+    background-color: #22254b;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+    width: 250px;
+}
+
+.movie-content_title { 
+    margin-top: 100px;
+}
+
+.moviedetail-content {
+    background-color: #22254b !important;
+    max-width: 1280px;
+    min-height: 450px;
+    margin: 0 auto;
+    border-radius: 20px;
+    position: relative;
+}
+
+.movieinfo-thumb { 
+    width: 300px;
+    float: left;
+    @media screen and (max-width: 768px) {
+        width: 100% !important;
+      }
+}
+.movieinfo-text {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.rating-director {
+    display: flex;
+    justify-content: flex-start;
   }
+
+.director {
+    margin: 0 0 0 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.director p {
+    margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.movieinfo-text h1 {
+      font-family: 'Abel', sans-serif;
+      font-size: 48px;
+      margin: 0;
+
+      @media screen and (max-width: 1000px) {
+        font-size: 32px !important;
+      }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movieinfo-text h4 h5 {
+      font-size: 16px;
+      line-height: 0;
+      margin-top: 30px;
 }
+
+.movieinfo-text p {
+      font-family: 'Abel', sans-serif;
+      font-size: 18px;
+      line-height: 26px;
+}
+
+.movie-card img { 
+    max-width: 100%;
+}
+
+.movie-card .clickable {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.movie-card .clickable:hover {
+	transform: scale(1.05);
+}
+
+.movie-container { 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.movie-card__details { 
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem 0.5rem;
+    border-radius: 20px;
+}
+
+.movie-card__details h5 { 
+    margin: 0;
+    text-decoration: none
+}
+
+.movie-card__details span { 
+    background-color: #22254b;
+    font-weight: bold;
+    padding: 0.25rem 0rem;
+}
+
+.red { 
+    color: red;
+    padding: 0.5rem;
+    border-radius: 25px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    background-color: rgb(245, 245, 245) !important;
+    margin: 0;
+}
+
+.yellow { 
+    color: rgb(241, 158, 3);
+    padding: 0.5rem;
+    border-radius: 25px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    background-color: #fff !important;
+    margin: 0;
+
+}
+.green { 
+    color: green;
+    border-radius: 25px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    background-color: #fff !important;
+    margin: 0;
+}
+

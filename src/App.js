@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { MovieNow, MovieCardDetail } from "./Components/index";
+import { Provider } from "react-redux";
+import store from "./store";
+import { Switch, Route, Link } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Provider store={store}>
+        <nav className="navbar navbar-dark bg-dark fixed-top header">
+          <h4 className="navbar-brand">
+            <Link to="/">Now Playing</Link>
+          </h4>
+          {/* <h4 className="navbar-brand">
+        <Link to="/similar">Fav</Link>
+      </h4> */}
+        </nav>
+        <Switch>
+          <Route path="/:movieId">
+            <MovieCardDetail />
+          </Route>
+          <Route path="/">
+            <MovieNow />
+          </Route>
+        </Switch>
+      </Provider>
     </div>
   );
 }
